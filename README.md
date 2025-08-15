@@ -1,9 +1,8 @@
-```markdown
 #  Multi-Bot
 
 A sleek, multi-provider AI chat application with a unified browser interface. Supports chat across OpenAI, Groq, Mistral, Anthropic, Gemini, and xAI, while keeping all API keys securely on the server (never exposed in the browser).
 
-[Live Demo](https://multi-bot-fawn.vercel.app) *(if available)*
+[Live Demo](https://multi-bot-fawn.vercel.app)
 
 ---
 
@@ -19,8 +18,6 @@ A sleek, multi-provider AI chat application with a unified browser interface. Su
 
 ##  Project Structure
 
-```
-
 Multi-Bot/
 │
 ├── public/                 # Client-side app
@@ -32,8 +29,6 @@ Multi-Bot/
 ├── package.json            # Scripts and dependencies
 ├── vercel.json             # Vercel deployment config
 └── .env                    # Environment variables (.gitignored)
-
-````
 
 ---
 
@@ -49,7 +44,7 @@ Make sure you have **Node.js** and **npm** installed.
 git clone https://github.com/Harshsfd/Multi-Bot.git
 cd Multi-Bot
 npm install
-````
+```
 
 ### Setup Environment Variables
 
@@ -189,7 +184,7 @@ Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 ## Connect with Me
 
 * [GitHub](https://github.com/Harshsfd)
-* [Portfolio](https://harshbhardwaj-portfolio.vercel.app) *(if applicable)*
+* [Portfolio](https://harshbhardwaj-portfolio.vercel.app)
 
 ---
 
