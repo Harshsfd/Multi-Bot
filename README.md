@@ -131,12 +131,13 @@ npm start
 
 ## 💻 UI Highlights
 
-🎯 **Provider Selector** – Switch AI backends instantly.
-🧩 **Model Input Field** – Flexible model selection.
-🗒 **System Prompt** – Customize assistant behavior.
-🎨 **Markdown Rendering** – Beautiful, formatted AI responses.
-⚙ **Config Controls** – Adjust temperature & max tokens.
-💡 **Security Reminder** – API keys never leave your server.
+- 🎯 **Provider Selector** – Switch AI backends instantly  
+- 🧩 **Model Input Field** – Flexible model selection  
+- 🗒 **System Prompt** – Customize assistant behavior  
+- 🎨 **Markdown Rendering** – Beautiful, formatted AI responses  
+- ⚙ **Config Controls** – Adjust temperature & max tokens  
+- 💡 **Security Reminder** – API keys never leave your server  
+
 
 ---
 
