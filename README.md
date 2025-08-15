@@ -195,4 +195,4 @@ See [LICENSE](LICENSE) for details.
 ## 🌐 Connect
 
 * **GitHub**: [Harshsfd](https://github.com/Harshsfd)
-* **Portfolio**: [harshbhardwaj-portfolio.vercel.app](https://harshbhardwaj-portfolio.vercel.app)
+* **Portfolio**: [harshbhardwaj](https://harshbhardwaj-portfolio.vercel.app)
