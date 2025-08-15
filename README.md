@@ -1,22 +1,25 @@
-#  Multi-Bot
+# 🚀 Multi-Bot
 
-A sleek, multi-provider AI chat application with a unified browser interface. Supports chat across OpenAI, Groq, Mistral, Anthropic, Gemini, and xAI, while keeping all API keys securely on the server (never exposed in the browser).
+A **sleek**, **multi-provider AI chat application** with a unified browser interface.  
+Supports **OpenAI**, **Groq**, **Mistral**, **Anthropic**, **Gemini**, and **xAI** — all while keeping API keys **safe on the server** (never exposed to the browser).  
 
-[Live Demo](https://multi-bot-fawn.vercel.app)
-
----
-
-##  Features
-
-- **Provider-agnostic interface** — Choose from OpenAI, Groq, Mistral, Anthropic, Gemini, or xAI.
-- **Secure API key handling** — All API keys are managed server-side via `.env`.
-- **Markdown support** — Rich text formatting and syntax-highlighted code snippets using Marked.js.
-- **Snappy UX** — Responsive UI with a modern dark theme, compression, and HTTP logging for smooth performance.
-- **Ready for deployment** — Configured for deployment on Vercel or any other Node.js hosting platform.
+🔗 **[Live Demo »](https://multi-bot-fawn.vercel.app)**
 
 ---
 
-##  Project Structure
+## ✨ Features
+
+✅ **Provider-agnostic** – Switch between multiple AI providers effortlessly.  
+🔒 **Secure API key handling** – Managed **server-side** via `.env`.  
+📝 **Markdown support** – Rich text, syntax-highlighted code blocks via **Marked.js**.  
+⚡ **Snappy UX** – Dark mode, compression, and HTTP logging for smooth performance.  
+☁️ **Deployment-ready** – Works out-of-the-box on **Vercel** or any Node.js host.  
+
+---
+
+## 📂 Project Structure
+
+```
 
 Multi-Bot/
 │
@@ -25,30 +28,31 @@ Multi-Bot/
 │   ├── styles.css          # Dark-theme styling
 │   └── app.js              # Chat UI logic
 │
-├── server.js               # Express backend with modular provider support
-├── package.json            # Scripts and dependencies
-├── vercel.json             # Vercel deployment config
-└── .env                    # Environment variables (.gitignored)
+├── server.js               # Express backend with provider integrations
+├── package.json            # Scripts & dependencies
+├── vercel.json             # Vercel config
+└── .env                    # Environment variables (ignored in git)
+
+````
 
 ---
 
-##  Getting Started
+## 🛠 Getting Started
 
-### Prerequisites
+### 1️⃣ Prerequisites
+- **Node.js** (v16+ recommended)
+- **npm**
 
-Make sure you have **Node.js** and **npm** installed.
-
-### Installation
-
+### 2️⃣ Installation
 ```bash
 git clone https://github.com/Harshsfd/Multi-Bot.git
 cd Multi-Bot
 npm install
-```
+````
 
-### Setup Environment Variables
+### 3️⃣ Configure Environment
 
-Create a `.env` in the project root:
+Create a `.env` file in the root:
 
 ```env
 OPENAI_API_KEY="YOUR_OPENAI_KEY"
@@ -58,35 +62,35 @@ ANTHROPIC_API_KEY="YOUR_ANTHROPIC_KEY"
 GEMINI_API_KEY="YOUR_GEMINI_KEY"
 XAI_API_KEY="YOUR_XAI_KEY"
 
-# Optional:
-CORS_ORIGIN="*"    # Adjust in production
+# Optional
+CORS_ORIGIN="*"
 PORT=3000
 ```
 
-> Only providers with valid API keys will be enabled by the UI.
+💡 *Only providers with valid API keys will appear in the UI.*
 
-### Run Locally
+### 4️⃣ Run Locally
 
 ```bash
 npm run dev
 ```
 
-Visit: `http://localhost:3000`
+Then open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ---
 
-## Deployment
+## 🚀 Deployment
 
-### Deploy via Vercel
+### ▶ Deploy on Vercel
 
-1. Push the repo to your GitHub (or fork it if desired).
-2. Import the project on [Vercel](https://vercel.com).
-3. Configure your Environment Variables under *Project Settings → Environment Variables*.
-4. Deploy — it’s ready out of the box with `vercel.json`.
+1. Push your repo to GitHub.
+2. Import into [Vercel](https://vercel.com).
+3. Add your environment variables in **Settings → Environment Variables**.
+4. Deploy — done! ✅
 
-### Other Options
+### ▶ Other Hosting
 
-For any Node.js environment or hosting provider:
+Any Node.js hosting will work:
 
 ```bash
 npm start
@@ -94,102 +98,101 @@ npm start
 
 ---
 
-## API Reference
+## 📡 API Reference
 
-### `POST /api/chat`
+**POST** `/api/chat`
 
-* **Request Body**:
+**Request:**
 
-  ```jsonc
-  {
-    "provider": "mistral",
-    "model": "mistral-large-latest",
-    "system": "You are a helpful assistant",
-    "temperature": 0.7,
-    "max_tokens": 1024,
-    "messages": [
-      { "role": "user", "content": "Hello!" }
-    ]
-  }
-  ```
+```jsonc
+{
+  "provider": "mistral",
+  "model": "mistral-large-latest",
+  "system": "You are a helpful assistant",
+  "temperature": 0.7,
+  "max_tokens": 1024,
+  "messages": [
+    { "role": "user", "content": "Hello!" }
+  ]
+}
+```
 
-* **Response**:
+**Response:**
 
-  ```jsonc
-  {
-    "provider": "mistral",
-    "model": "mistral-large-latest",
-    "text": "Hi there! How can I help?"
-  }
-  ```
-
----
-
-## UI Highlights
-
-* **Provider Selector** – Choose your AI backend.
-* **Model Input Field** – Easily specify model names.
-* **Optional System Prompt** – Prime the assistant’s behavior.
-* **Temperature & Max Tokens** – Control response creativity and length.
-* **Chat History** – Markdown-rendered responses with code styling.
-* **Pro Tip Footer** – Reminds you to never expose your API keys.
+```jsonc
+{
+  "provider": "mistral",
+  "model": "mistral-large-latest",
+  "text": "Hi there! How can I help?"
+}
+```
 
 ---
 
-## Tech Stack
+## 💻 UI Highlights
 
-* **Backend**:
-
-  * `express` — Lightweight Node.js server
-  * `node-fetch` — HTTP client for provider APIs
-  * `dotenv` — Env var management
-  * `compression` — Response compression
-  * `morgan` — HTTP request logging
-  * `cors` — Cross-origin access control
-
-* **Frontend**:
-
-  * `marked.js` — Markdown parsing
-  * `Font Awesome` — Icons for UI
-  * CSS variables and dark theme styling
+🎯 **Provider Selector** – Switch AI backends instantly.
+🧩 **Model Input Field** – Flexible model selection.
+🗒 **System Prompt** – Customize assistant behavior.
+🎨 **Markdown Rendering** – Beautiful, formatted AI responses.
+⚙ **Config Controls** – Adjust temperature & max tokens.
+💡 **Security Reminder** – API keys never leave your server.
 
 ---
 
-## Security Best Practices
+## 🏗 Tech Stack
 
-* Never expose API keys in client-side code or version control.
-* Use secure CORS policies in production.
-* Keep `.env` in `.gitignore` and limit access to sensitive keys.
+**Backend**:
 
----
+* `express` – Web server
+* `node-fetch` – API calls
+* `dotenv` – Env vars
+* `compression` – Faster responses
+* `morgan` – HTTP logging
+* `cors` – Cross-origin handling
 
-## Contributing
+**Frontend**:
 
-Contributions are welcome! Feel free to:
-
-* Add new AI providers or streamline existing integrations.
-* Enhance UI/UX or expand chat features.
-* Improve documentation, error handling, or test coverage.
-
-Please open issues or pull requests—happy to collaborate!
-
----
-
-## License
-
-Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+* `marked.js` – Markdown parsing
+* `Font Awesome` – Icons
+* Custom CSS – Dark theme + responsive layout
 
 ---
 
-## Connect with Me
+## 🔐 Security Best Practices
 
-* [GitHub](https://github.com/Harshsfd)
-* [Portfolio](https://harshbhardwaj-portfolio.vercel.app)
+* Keep `.env` out of version control.
+* Restrict **CORS** in production.
+* Never embed API keys in frontend code.
 
 ---
 
-**Why this README works:**
+## 🤝 Contributing
 
-* Clear structure with headings for navigation (`Features`, `Setup`, `Usage`, `Contributing`).
-* Unique touches like the API example and tech stack outline developer expectations.
-* It’s deployment-ready and user-friendly—whether someone clones it locally or hits “Deploy” on Vercel.
+PRs are welcome!
+You can:
+
+* Add new AI providers
+* Enhance UI/UX
+* Improve docs or testing
+
+**Steps:**
+
+1. Fork the repo
+2. Create a new branch
+3. Make changes & commit
+4. Open a Pull Request 🎉
+
+---
+
+## 📜 License
+
+MIT © [Harsh Bhardwaj](https://github.com/Harshsfd)
+See [LICENSE](LICENSE) for details.
+
+---
+
+## 🌐 Connect
+
+* **GitHub**: [Harshsfd](https://github.com/Harshsfd)
+* **Portfolio**: [harshbhardwaj-portfolio.vercel.app](https://harshbhardwaj-portfolio.vercel.app)
