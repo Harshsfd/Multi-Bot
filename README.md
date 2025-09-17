@@ -1,7 +1,6 @@
-<h1 align="center">
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="70" />
+<h1 align="center">🤖
   <br />
-  🤖 Multi AI BOT
+ Multi AI BOT
 </h1>
 
 <p align="center">
