@@ -213,5 +213,3 @@ See [LICENSE](LICENSE) for details.
 
 * **GitHub** → [Harshsfd](https://github.com/Harshsfd)
 * **Portfolio** → [harshbhardwaj-portfolio.vercel.app](https://harshbhardwaj-portfolio.vercel.app)
-
-```
