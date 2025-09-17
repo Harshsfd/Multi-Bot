@@ -1,19 +1,37 @@
-# 🚀 Multi-Bot
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="70" />
+  <br />
+  🤖 Multi AI BOT
+</h1>
 
-A **sleek**, **multi-provider AI chat application** with a unified browser interface.  
-Supports **OpenAI**, **Groq**, **Mistral**, **Anthropic**, **Gemini**, and **xAI** — all while keeping API keys **safe on the server** (never exposed to the browser).  
+<p align="center">
+  A sleek, multi-provider AI chat app with a unified browser interface.<br/>
+  Supports <b>OpenAI, Groq, Mistral, Anthropic, Gemini, and xAI</b> — API keys stay safe on the server 🚀
+</p>
 
-🔗 **[Live Demo »](https://multi-bot-fawn.vercel.app)**
+<p align="center">
+  <a href="https://multi-bot-fawn.vercel.app" target="_blank">🌐 Live Demo</a> ·
+  <a href="#-features">✨ Features</a> ·
+  <a href="#-getting-started">⚡ Getting Started</a> ·
+  <a href="#-api-reference">📡 API</a> ·
+  <a href="#-tech-stack">🛠 Tech Stack</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Made%20With-Node.js-blue?style=for-the-badge&logo=node.js" />
+  <img src="https://img.shields.io/badge/Deployed%20On-Vercel-black?style=for-the-badge&logo=vercel" />
+</p>
 
 ---
 
 ## ✨ Features
 
-✅ **Provider-agnostic** – Switch between multiple AI providers effortlessly.  
-🔒 **Secure API key handling** – Managed **server-side** via `.env`.  
-📝 **Markdown support** – Rich text, syntax-highlighted code blocks via **Marked.js**.  
-⚡ **Snappy UX** – Dark mode, compression, and HTTP logging for smooth performance.  
-☁️ **Deployment-ready** – Works out-of-the-box on **Vercel** or any Node.js host.  
+- ✅ **Provider-agnostic** – switch between AI providers effortlessly  
+- 🔒 **Secure API handling** – keys managed **server-side** via `.env`  
+- 📝 **Markdown rendering** – formatted text + syntax-highlighted code blocks (Marked.js)  
+- ⚡ **Smooth UX** – dark theme, compression, HTTP logging  
+- ☁️ **Deployment-ready** – plug-and-play with **Vercel** or any Node.js host  
 
 ---
 
@@ -22,26 +40,25 @@ Supports **OpenAI**, **Groq**, **Mistral**, **Anthropic**, **Gemini**, and **xAI
 ```
 
 Multi-Bot/
+├── public/              # Client-side assets
+│   ├── index.html       # Chat interface
+│   ├── styles.css       # Dark theme styling
+│   └── app.js           # Chat UI logic
 │
-├── public/                 # Client-side app
-│   ├── index.html          # Chat interface
-│   ├── styles.css          # Dark-theme styling
-│   └── app.js              # Chat UI logic
-│
-├── server.js               # Express backend with provider integrations
-├── package.json            # Scripts & dependencies
-├── vercel.json             # Vercel config
-└── .env                    # Environment variables (ignored in git)
+├── server.js            # Express backend + provider routes
+├── package.json         # Dependencies & scripts
+├── vercel.json          # Vercel config
+└── .env                 # Environment variables (ignored by git)
 
 ````
 
 ---
 
-## 🛠 Getting Started
+## ⚡ Getting Started
 
 ### 1️⃣ Prerequisites
-- **Node.js** (v16+ recommended)
-- **npm**
+- Node.js **v16+**
+- npm
 
 ### 2️⃣ Installation
 ```bash
@@ -52,7 +69,7 @@ npm install
 
 ### 3️⃣ Configure Environment
 
-Create a `.env` file in the root:
+Create `.env` in root:
 
 ```env
 OPENAI_API_KEY="YOUR_OPENAI_KEY"
@@ -67,7 +84,7 @@ CORS_ORIGIN="*"
 PORT=3000
 ```
 
-💡 *Only providers with valid API keys will appear in the UI.*
+💡 *Only providers with valid API keys appear in the UI.*
 
 ### 4️⃣ Run Locally
 
@@ -75,22 +92,20 @@ PORT=3000
 npm run dev
 ```
 
-Then open **[http://localhost:3000](http://localhost:3000)** in your browser.
+👉 Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🚀 Deployment
 
-### ▶ Deploy on Vercel
+### ▶ Vercel
 
-1. Push your repo to GitHub.
-2. Import into [Vercel](https://vercel.com).
-3. Add your environment variables in **Settings → Environment Variables**.
-4. Deploy — done! ✅
+1. Push repo → GitHub
+2. Import into [Vercel](https://vercel.com)
+3. Add `.env` variables in **Project Settings → Environment Variables**
+4. Deploy ✅
 
 ### ▶ Other Hosting
-
-Any Node.js hosting will work:
 
 ```bash
 npm start
@@ -129,60 +144,62 @@ npm start
 
 ---
 
-## 💻 UI Highlights
+## 🎨 UI Highlights
 
-- 🎯 **Provider Selector** – Switch AI backends instantly  
-- 🧩 **Model Input Field** – Flexible model selection  
-- 🗒 **System Prompt** – Customize assistant behavior  
-- 🎨 **Markdown Rendering** – Beautiful, formatted AI responses  
-- ⚙ **Config Controls** – Adjust temperature & max tokens  
-- 💡 **Security Reminder** – API keys never leave your server  
-
+* 🎯 **Provider Selector** – choose backend instantly
+* 🧩 **Model Input Field** – custom model selection
+* 🗒 **System Prompt** – define assistant behavior
+* 📝 **Markdown Rendering** – clean, formatted AI responses
+* ⚙️ **Config Controls** – tweak temperature, tokens
+* 🔐 **Security Reminder** – API keys never leave the server
 
 ---
 
-## 🏗 Tech Stack
+## 🛠 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,js,html,css,vercel,git,github" />
+</p>
 
 **Backend**:
 
-* `express` – Web server
-* `node-fetch` – API calls
-* `dotenv` – Env vars
-* `compression` – Faster responses
-* `morgan` – HTTP logging
-* `cors` – Cross-origin handling
+* `express` – API server
+* `node-fetch` – Provider API calls
+* `dotenv` – Env var management
+* `compression` – Gzip compression
+* `morgan` – HTTP request logging
+* `cors` – Cross-origin resource sharing
 
 **Frontend**:
 
 * `marked.js` – Markdown parsing
 * `Font Awesome` – Icons
-* Custom CSS – Dark theme + responsive layout
+* Custom CSS – Dark responsive UI
 
 ---
 
 ## 🔐 Security Best Practices
 
-* Keep `.env` out of version control.
-* Restrict **CORS** in production.
-* Never embed API keys in frontend code.
+* Keep `.env` **out of version control**
+* Restrict **CORS origins** in production
+* Never expose API keys in frontend code
 
 ---
 
 ## 🤝 Contributing
 
-PRs are welcome!
-You can:
+PRs welcome! You can:
 
-* Add new AI providers
-* Enhance UI/UX
-* Improve docs or testing
+* Add support for new AI providers
+* Improve UI/UX
+* Enhance docs/tests
 
 **Steps:**
 
-1. Fork the repo
-2. Create a new branch
-3. Make changes & commit
-4. Open a Pull Request 🎉
+1. Fork repo
+2. Create branch (`feature/new-feature`)
+3. Commit & push
+4. Open PR 🎉
 
 ---
 
@@ -195,5 +212,7 @@ See [LICENSE](LICENSE) for details.
 
 ## 🌐 Connect
 
-* **GitHub**: [Harshsfd](https://github.com/Harshsfd)
-* **Portfolio**: [harshbhardwaj](https://harshbhardwaj-portfolio.vercel.app)
+* **GitHub** → [Harshsfd](https://github.com/Harshsfd)
+* **Portfolio** → [harshbhardwaj-portfolio.vercel.app](https://harshbhardwaj-portfolio.vercel.app)
+
+```
